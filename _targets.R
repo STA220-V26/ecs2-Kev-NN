@@ -53,7 +53,7 @@ list(
   tar_load(zipdata),
 
   # Unzip the zip file using the tar_target function
-  tar_target(csv_files, zip::unzip(zipdata))
+  tar_target(csv_files, zip::unzip(zipdata)),
 
   # TODO: uncomment this section when instructed
    tar_map(
@@ -61,8 +61,7 @@ list(
       dplyr::mutate(name = tools::file_path_sans_ext(basename(path))),
     tar_target(dt, fread(path)),
     names = name,
-    descriptions = NULL
-  ),
+    descriptions = NULL)
 
   # TODO: something related to codebook should be added here
 

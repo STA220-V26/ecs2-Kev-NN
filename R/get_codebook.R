@@ -1,3 +1,9 @@
+#' Title
+#'
+#' @returns
+#'
+#' @export
+#' @examples
 get_codebook <- function() {
   tabs <-
     "https://github.com/synthetichealth/synthea/wiki/CSV-File-Data-Dictionary" |>
